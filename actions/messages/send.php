@@ -35,7 +35,7 @@ foreach ($recipient_guids as $idx => $guid) {
 		register_error(elgg_echo("messages:user:nonexist", array($guid)));
 	} else {
 		// Otherwise, 'send' the message 
-		$result = messages_send($subject, $body, $guid, 0, $reply, TRUE, FALSE);
+		$result = messages_send($subject, $body, $guid, 0, $reply);
 		if (!$result) {
 			register_error(elgg_echo("messages-extender:user:senderror", array($user->name)));
 		}
