@@ -22,6 +22,10 @@ if (!$recipient_guids || empty($recipient_guids)) {
 	forward("messages/compose");
 }
 
+if (!is_array($recipient_guids)) {
+	$recipient_guids = array($recipient_guids);
+}
+
 // Make sure the message field, send to field and title are not blank
 if (!$body || !$subject) {
 	register_error(elgg_echo("messages:blank"));
