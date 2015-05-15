@@ -5,8 +5,8 @@
  * @package Messages-Extender
  * @license http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU Public License version 2
  * @author Jeff Tilson
- * @copyright THINK Global School 2010 - 2013
- * @link http://www.thinkglobalschool.com/
+ * @copyright THINK Global School 2010 - 2015
+ * @link http://www.thinkglobalschool.org/
  * 
  * @uses $vars['friends']
  */
@@ -14,24 +14,6 @@
 $members = elgg_extract('members', $vars);
 $subject = elgg_extract('subject', $vars, '');
 $body = elgg_extract('body', $vars, '');
-
-// $recipients_options = array();
-// foreach ($vars['friends'] as $friend) {
-// 	$recipients_options[$friend->guid] = $friend->name;
-// }
-
-// if (!array_key_exists($recipient_guid, $recipients_options)) {
-// 	$recipient = get_entity($recipient_guid);
-// 	if (elgg_instanceof($recipient, 'user')) {
-// 		$recipients_options[$recipient_guid] = $recipient->name;
-// 	}
-// }
-
-// $recipient_drop_down = elgg_view('input/dropdown', array(
-// 	'name' => 'recipient_guid',
-// 	'value' => $recipient_guid,
-// 	'options_values' => $recipients_options,
-// ));
 
 $recipient_picker = elgg_view('input/userpicker', array(
 	'id' => 'recipient_guids',
