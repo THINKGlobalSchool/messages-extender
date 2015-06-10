@@ -41,7 +41,7 @@ function messages_extender_route_handler($hook, $type, $return, $params) {
 		elgg_load_library('elgg:messages');
 		$base_dir = elgg_get_plugins_path() . 'messages-extender/pages/messages';
 		include("$base_dir/send.php");
-		return true;
+		return false;
 	}
 	return $return;
 }
